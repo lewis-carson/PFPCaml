@@ -1,4 +1,0 @@
-(lang dune 3.17)
-(name prob)
-(sections (lib .) (bin ../../bin) (doc ../../doc/prob))
-(files (lib (META dune-package opam)) (bin (prob)) (doc (README.md)))
