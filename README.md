@@ -1,10 +1,10 @@
 ## PFPCaml
 
-A port of the [PFP library](https://web.engr.oregonstate.edu/~erwig/papers/PFP_JFP06.pdf) from Haskell to OCaml. This was ill-advised, because I didn't know Haskell OR OCaml. I thought this would be a good opportunity to get comfortable with both. Also, the actual library has got some pretty interesting concepts.
+A port of the library described in [this 2006 paper](https://web.engr.oregonstate.edu/~erwig/papers/PFP_JFP06.pdf) from Haskell to OCaml. This was ill-advised, because I didn't know Haskell or OCaml. I thought this would be a good opportunity to get comfortable with both. Also, the actual library has got some pretty interesting concepts.
 
 I've translated the core of the module, [Probability.hs](https://github.com/lewis-carson/PFPCaml/blob/main/reference/Probability.hs) (from the original 2006 version) to [OCaml](https://github.com/lewis-carson/PFPCaml/blob/main/lib/probability.ml).
 
-Here's some differences between the Haskell and OCaml versions:
+A lot of the time, this felt like trying to fit a round peg into a square hole:
 
 - Type Definitions:
    - Haskell uses `newtype` for `Probability`, while OCaml uses `type`.
