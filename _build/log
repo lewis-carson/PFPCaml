@@ -1,0 +1,543 @@
+# dune build -w
+# OCAMLPARAM: unset
+# Shared cache: enabled-except-user-rules
+# Shared cache location: /Users/lew/.cache/dune/db
+# Workspace root: /Users/lew/Projects/ocaml_prob
+# Auto-detected concurrency: 8
+# Dune context:
+#  { name = "default"
+#  ; kind = "default"
+#  ; profile = Dev
+#  ; merlin = true
+#  ; fdo_target_exe = None
+#  ; build_dir = In_build_dir "default"
+#  ; instrument_with = []
+#  }
+$ /Users/lew/.opam/default/bin/ocamlc.opt -config > /var/folders/5x/w3bjcy8966lfq708g3w1mycw0000gn/T/dune_b7f82b_output
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 414, characters 10-16:
+> 414 |   let rec ( *. ) n t x = 
+>                 ^^^^^^
+> Error (warning 39 [unused-rec-flag]): unused rec flag.
+>
+> File "lib/probability.ml", line 414, characters 10-16:
+> 414 |   let rec ( *. ) n t x = 
+>                 ^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value *..
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 414, characters 10-16:
+> 414 |   let rec ( *. ) n t x = 
+>                 ^^^^^^
+> Error (warning 39 [unused-rec-flag]): unused rec flag.
+>
+> File "lib/probability.ml", line 414, characters 10-16:
+> 414 |   let rec ( *. ) n t x = 
+>                 ^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value *..
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 414, characters 6-12:
+> 414 |   let ( *. ) n t x = 
+>             ^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value *..
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 412, characters 57-64:
+> 412 |       D (List.concat (List.map (fun (y, p) -> let D d' = ( *.. ) (n - 1) t y in List.map (fun (ys, q) -> (x :: ys, p *. q)) d') d))
+>                                                                ^^^^^^^
+> Error: Unbound value ( *.. )
+> Hint: Did you mean *.?
+> Hint: If this is a recursive definition,
+> you should add the rec keyword on line 408
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 414, characters 6-12:
+> 414 |   let ( *. ) n t x = 
+>             ^^^^^^
+> Error (warning 32 [unused-value-declaration]): unused value *..
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", lines 511-525, characters 48-3:
+> 511 | ................................................struct
+> 512 |   type 'a t = 'a dist
+> 513 | 
+> 514 |   let sim n t x =
+> 515 |     let random_t = fun () -> pick (t x) in
+> ...
+> 522 |   let sim_iter (n, m) t x =
+> 523 |     let random_t = fun () -> pick (t x) in
+> 524 |     IterateIO.iter n random_t
+> 525 | end
+> Error: Signature mismatch:
+>        ...
+>        Values do not match:
+>          val sim : int -> ('a -> unit random t) -> 'a -> unit -> unit random
+>        is not included in
+>          val sim : int -> ('a -> 'a t) -> 'a rtrans
+>        The type int -> ('a -> unit random t) -> 'a -> unit -> unit random
+>        is not compatible with the type int -> ('a -> 'a t) -> 'a rtrans
+>        Type unit random = unit -> unit is not compatible with type 'a
+>        Hint: Did you forget to provide () as argument?
+>        File "lib/probability.ml", line 506, characters 2-44:
+>          Expected declaration
+>        File "lib/probability.ml", line 514, characters 6-9:
+>          Actual declaration
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", lines 511-525, characters 48-3:
+> 511 | ................................................struct
+> 512 |   type 'a t = 'a dist
+> 513 | 
+> 514 |   let sim n t x =
+> 515 |     let random_t = fun () -> pick (t x) in
+> ...
+> 522 |   let sim_iter (n, m) t x =
+> 523 |     let random_t = fun () -> pick (t x) in
+> 524 |     IterateIO.iter n random_t
+> 525 | end
+> Error: Signature mismatch:
+>        ...
+>        Values do not match:
+>          val sim :
+>            int -> (unit -> unit random t) -> unit -> unit -> unit random
+>        is not included in
+>          val sim : int -> ('a -> 'a t) -> 'a rtrans
+>        The type int -> (unit -> unit random t) -> unit -> unit -> unit random
+>        is not compatible with the type int -> ('a -> 'a t) -> 'a rtrans
+>        Type unit is not compatible with type 'a
+>        File "lib/probability.ml", line 506, characters 2-44:
+>          Expected declaration
+>        File "lib/probability.ml", line 514, characters 6-9:
+>          Actual declaration
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", lines 511-525, characters 48-3:
+> 511 | ................................................struct
+> 512 |   type 'a t = 'a dist
+> 513 | 
+> 514 |   let sim n t x =
+> 515 |     let random_t = fun () -> pick (t x) in
+> ...
+> 522 |   let sim_iter (n, m) t x =
+> 523 |     let random_t = fun () -> pick (t x) in
+> 524 |     IterateIO.iter n random_t
+> 525 | end
+> Error: Signature mismatch:
+>        ...
+>        Values do not match:
+>          val sim : int -> ('a -> unit random t) -> 'a -> unit -> unit random
+>        is not included in
+>          val sim : int -> ('a -> 'a t) -> 'a rtrans
+>        The type int -> ('a -> unit random t) -> 'a -> unit -> unit random
+>        is not compatible with the type int -> ('a -> 'a t) -> 'a rtrans
+>        Type unit random = unit -> unit is not compatible with type 'a
+>        Hint: Did you forget to provide () as argument?
+>        File "lib/probability.ml", line 506, characters 2-44:
+>          Expected declaration
+>        File "lib/probability.ml", line 514, characters 6-9:
+>          Actual declaration
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", lines 511-525, characters 48-3:
+> 511 | ................................................struct
+> 512 |   type 'a t = 'a dist
+> 513 | 
+> 514 |   let sim n t x () =
+> 515 |     let random_t = fun () -> pick (t x) in
+> ...
+> 522 |   let sim_iter (n, m) t x =
+> 523 |     let random_t = fun () -> pick (t x) in
+> 524 |     IterateIO.iter n random_t
+> 525 | end
+> Error: Signature mismatch:
+>        ...
+>        Values do not match:
+>          val sim : int -> (unit -> unit random t) -> unit -> unit -> unit
+>        is not included in
+>          val sim : int -> ('a -> 'a t) -> 'a rtrans
+>        The type int -> (unit -> unit random t) -> unit -> unit -> unit
+>        is not compatible with the type int -> ('a -> 'a t) -> 'a rtrans
+>        Type unit is not compatible with type 'a
+>        File "lib/probability.ml", line 506, characters 2-44:
+>          Expected declaration
+>        File "lib/probability.ml", line 514, characters 6-9:
+>          Actual declaration
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 523, characters 79-82:
+> 523 |           D (List.concat (List.map (fun (ys, q) -> (List.hd xs :: ys, p *. q)) d'') @ d')
+>                                                                                      ^^^
+> Error: The value d'' has type ('a * float) trace
+>        but an expression was expected of type ('a trace * float) trace
+>        The type variable 'a occurs inside 'a trace
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 516, characters 2-5:
+> 516 |   let sim_trace (n, m) t x () =
+>         ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 520, characters 22-79:
+> 520 |           List.concat (List.map (fun (ys, q) -> (List.hd xs :: ys, p *. q)) d') @ d
+>                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Error: This expression has type ('a trace * float) trace
+>        but an expression was expected of type 'b trace trace
+>        Type 'a trace * float is not compatible with type 'b trace
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 520, characters 22-79:
+> 520 |           List.concat (List.map (fun (ys, q) -> (List.hd xs :: ys, p *. q)) d') @ d
+>                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> Error: This expression has type ('a trace * float) trace
+>        but an expression was expected of type 'b trace trace
+>        Type 'a trace * float is not compatible with type 'b trace
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 514, characters 28-32:
+> 514 |   let sim n f x = fun () -> iter n f x
+>                                   ^^^^
+> Error: Unbound value iter
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 521, characters 12-16:
+> 521 |         let D d' = sim_trace' n (m - 1) f in
+>                   ^^^^
+> Error: This pattern should not be a constructor, the expected type is
+>        'a -> 'a trace t
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 522, characters 92-98:
+> 522 |         D (List.concat (List.map (fun (y, p) -> List.map (fun (ys, q) -> (y :: ys, p *. q)) (d' y)) d))
+>                                                                                                   ^^^^^^
+> Error: This expression has type 'a trace t
+>        but an expression was expected of type ('a trace * float) trace
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 522, characters 94-100:
+> 522 |         D (List.concat (List.map (fun (y, p) -> List.map (fun (ys, q) -> ((y :: ys), p *. q)) (d' y)) d))
+>                                                                                                     ^^^^^^
+> Error: This expression has type 'a trace t
+>        but an expression was expected of type ('a trace * float) trace
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 522, characters 94-110:
+> 522 |         D (List.concat (List.map (fun (y, p) -> List.map (fun (ys, q) -> ((y :: ys), p *. q)) (extract (d' y))) d))
+>                                                                                                     ^^^^^^^^^^^^^^^^
+> Error: This expression has type 'a trace trace
+>        but an expression was expected of type ('a trace * float) trace
+>        Type 'a trace is not compatible with type 'a trace * float
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 539, characters 26-26:
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 551, characters 32-32:
+> Error: Syntax error: "end" expected
+> File "lib/probability.ml", line 534, characters 48-54:
+> 534 | module SimIO : Sim with type 'a t = 'a random = struct
+>                                                       ^^^^^^
+>   This "struct" might be unmatched
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 547, characters 28-29:
+> 547 |           let (y, p) = pick d in
+>                                   ^
+> Error: The value d has type ('a * float) trace
+>        but an expression was expected of type 'b dist
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 534, characters 48-48:
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 547, characters 28-29:
+> 547 |           let (y, p) = pick d in
+>                                   ^
+> Error: The value d has type ('a * float) trace
+>        but an expression was expected of type 'b dist
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", line 547, characters 28-29:
+> 547 |           let (y, p) = pick d in
+>                                   ^
+> Error: The value d has type ('a * float) trace
+>        but an expression was expected of type 'b dist
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+> File "lib/probability.ml", lines 534-555, characters 48-3:
+> 534 | ................................................struct
+> 535 |   type 'a t = 'a random
+> 536 | 
+> 537 |   let sim n f x () = IterateIO.iter n f x
+> 538 | 
+> ...
+> 552 |       else bind (f x) (sim_iter' n (m - 1) f)
+> 553 |     in
+> 554 |     fun () -> sim_iter' n m f x
+> 555 | end
+> Error: Signature mismatch:
+>        ...
+>        Values do not match:
+>          val sim : int -> ('a -> 'a t) -> 'a -> unit -> 'a t
+>        is not included in
+>          val sim : int -> ('a -> 'a t) -> 'a rtrans
+>        The type int -> ('a -> 'a t) -> 'a -> unit -> 'a t
+>        is not compatible with the type int -> ('a -> 'a t) -> 'a rtrans
+>        Type 'a -> unit -> 'a t is not compatible with type
+>          'a rtrans = 'a -> 'a rdist
+>        Type unit -> 'a t is not compatible with type
+>          'a rdist = unit -> 'a dist
+>        Type 'a t = unit -> 'a is not compatible with type 'a dist
+>        File "lib/probability.ml", line 506, characters 2-44:
+>          Expected declaration
+>        File "lib/probability.ml", line 537, characters 6-9:
+>          Actual declaration
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cma lib/.prob.objs/byte/prob.cmo lib/.prob.objs/byte/prob__Probability.cmo)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -a -o lib/prob.cmxa lib/.prob.objs/native/prob.cmx lib/.prob.objs/native/prob__Probability.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -shared -linkall -I lib -o lib/prob.cmxs lib/prob.cmxa)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I bin/.main.eobjs/byte -I lib/.prob.objs/byte -no-alias-deps -opaque -o bin/.main.eobjs/byte/dune__exe__Main.cmi -c -intf bin/main.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_prob.cmi -c -intf test/test_prob.mli)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I test/.test_prob.eobjs/byte -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/byte/dune__exe__Test_family.cmo -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I bin/.main.eobjs/byte -I bin/.main.eobjs/native -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -o bin/.main.eobjs/native/dune__exe__Main.cmx -c -impl bin/main.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx -c -impl test/test_prob.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I test/.test_prob.eobjs/byte -I test/.test_prob.eobjs/native -I /Users/lew/.opam/default/lib/ocaml/unix -I /Users/lew/.opam/default/lib/ounit2 -I /Users/lew/.opam/default/lib/ounit2/advanced -I /Users/lew/.opam/default/lib/seq -I /Users/lew/.opam/default/lib/stdlib-shims -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Dune__exe -o test/.test_prob.eobjs/native/dune__exe__Test_family.cmx -c -impl test/test_family.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o bin/main.exe lib/prob.cmxa bin/.main.eobjs/native/dune__exe__Main.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -o test/test_prob.exe lib/prob.cmxa /Users/lew/.opam/default/lib/ocaml/unix/unix.cmxa /Users/lew/.opam/default/lib/stdlib-shims/stdlib_shims.cmxa /Users/lew/.opam/default/lib/ounit2/advanced/oUnitAdvanced.cmxa /Users/lew/.opam/default/lib/ounit2/oUnit.cmxa test/.test_prob.eobjs/native/dune__exe.cmx test/.test_prob.eobjs/native/dune__exe__Test_family.cmx test/.test_prob.eobjs/native/dune__exe__Test_prob.cmx)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlc.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -bin-annot -bin-annot-occurrences -I lib/.prob.objs/byte -no-alias-deps -opaque -open Prob -o lib/.prob.objs/byte/prob__Probability.cmo -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamlopt.opt -w @1..3@5..28@31..39@43@46..47@49..57@61..62@67@69-40 -strict-sequence -strict-formats -short-paths -keep-locs -g -I lib/.prob.objs/byte -I lib/.prob.objs/native -intf-suffix .ml -no-alias-deps -opaque -open Prob -o lib/.prob.objs/native/prob__Probability.cmx -c -impl lib/probability.ml)
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 534, characters 54-54:
+> Error: Syntax error: "end" expected
+> File "lib/probability.ml", line 534, characters 48-54:
+> 534 | module SimIO : Sim with type 'a t = 'a random = struct
+>                                                       ^^^^^^
+>   This "struct" might be unmatched
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 541, characters 4-7:
+> 541 |     let rec sim_trace' n m f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 541, characters 4-7:
+> 541 |     let rec sim_trace' n m f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 537, characters 18-19:
+> 537 |   let sim n f x = _
+>                         ^
+> Error: Syntax error: "wildcard "_"" not expected.
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 541, characters 4-7:
+> 541 |     let rec sim_trace' n m f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 539, characters 2-5:
+> 539 |   let sim_trace (n, m) f x
+>         ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 538, characters 4-7:
+> 538 |     let rec sim' n f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 539, characters 2-5:
+> 539 |   let sim_trace (n, m) f x
+>         ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 538, characters 4-7:
+> 538 |     let rec sim' n f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 548, characters 4-7:
+> 548 |     let rec sim_trace' n m f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 546, characters 4-7:
+> 546 |     let rec sim_trace' n m f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 548, characters 4-7:
+> 548 |     let rec sim_trace' n m f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 547, characters 2-5:
+> 547 |   let sim_iter (n, m) f x =
+>         ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
+> File "lib/probability.ml", line 548, characters 4-7:
+> 548 |     let rec sim_trace' n m f x =
+>           ^^^
+> Error: Syntax error
+[2]
+$ (cd _build/default && /Users/lew/.opam/default/bin/ocamldep.opt -modules -impl lib/probability.ml) > _build/default/lib/.prob.objs/prob__Probability.impl.d
