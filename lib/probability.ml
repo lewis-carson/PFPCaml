@@ -518,6 +518,7 @@ module SimDist : Sim with type 'a t = 'a dist = struct
       if m <= 0 then certainly [x]
       else
         let D d = f x in
+        (* really not proud of this - TODO *)
         let d' = sim_trace' n (m - 1) f in
         D (List.concat (List.map (fun (y, p) -> List.map (fun (ys, q) -> ((y :: ys), p *. q)) (let D d'' = d' y in d'')) d))
     in
